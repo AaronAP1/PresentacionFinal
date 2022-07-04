@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+<li class="nav-item active">
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head th:fragment="head">
+        <title>Registro | Chaclacayo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="conteiner">
+            
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: green">
+        <a class="navbar-brand">
+        <img src="https://www.adobe.com/es/express/create/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg?width=400&format=jpeg&optimize=medium" width="40" height="40" class="d-inline-block align-top" alt="">
+    
+        </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">PASOS </a>
+      </li>
+      
+        <a class="nav-link" >REQUISITOS </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LOGIN</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      
+      <button class="btn btn-outline-success my-lg-0 my-sm-3" type="submit">MI MUNICIPALIDAD</button>
+    </form>
+
+
+
+
+  </div>
+        </nav>
+            <div class="container-fluid" layout:fragment="page-content">
+
+           </div>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+        
+        
+        
+        <!-- Scripts -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>
