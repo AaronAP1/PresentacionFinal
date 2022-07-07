@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="container-fluid" layout:fragment="page-content">
+        <section id="vista" class="hero " >
+            <div class="container text-center " >
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <h1>
+                        Registros de Organizaciones Sociales
+                    </h1>
+
+                    <p class="tagline">
+                        Visualize las organizaciones sociales registradas 
+                    </p>
+
+                </div>
+            </div>
+
+        </section><!-- End Hero -->
+
+        <main id="main">
+            <section class="about " id="pasos">
+
+                <div class="search-input">
+                    <div class="container">
+                        <div class="search-input-wrapper">
+                            <form>
+                                 <div class="row">
+                                <div class="col-sm-4">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por tipo de organización</h5>
+                                    <select class="form-control obj_tipo" id="obj_tipo" name="obj_tipo">
+                                        <option value="">Todos</option>
+                                       
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por año</h5>
+                                    <select class="form-control obj_anio" id="obj_anio" name="obj_anio">
+                                        <option value="">Todos</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por distrito</h5>
+                                    <select class="form-control obj_distrito" id="obj_distrito" name="obj_distrito">
+                                        <option value="">Todos</option>
+
+                                    </select>
+                                </div>
+
+
+                                <div class="col-sm-2">
+                                    <h5 style="color: #ebebeb;"> __</h5>
+                                    <div type="submit" class="form-submit btn btn-transition-2 searchRes" style="width:100%; padding: inherit;">
+                                        <span>Buscar <i class="fa fa-search"></i></span>
+                                    </div>
+
+                                </div>
+                                     </div>
+
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </section><!-- End About Section -->
+
+ <div>            
+      <br>
+            <div class="container mt-3">                
+                
+                <a th:href="@{/libro/exportarPDF}" class="btn btn-secondary mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a PDF</strong>
+                </a>
+                <a th:href="@{/libro/exportarExcel}" class="btn btn-success mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a Excel</strong>
+                </a>
+                <div class="row">
+                    <div class="col">
+                        <table class="table table-bordered" id="tablita">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">CODIGO DE ORGANIZACION</th>
+                                    <th scope="col">NOMBRE DE ORGANIZACION</th>
+                                    <th scope="col">NIVEL</th>
+                                    <th scope="col">DISTRITO</th>
+                                    <th scope="col">INICIO DE VIGENCIA</th>
+                                    <th scope="col">FIN DE VIGENCIA</th>
+                                    <th scope="col">TIPO DE ORGANIZACION</th>
+                                    <th scope="col">RESOLUCION DE LA ORGANIZACION</th>
+                                    <th scope="col">DESCARGAR RESOLUCION</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <tr >
+                                    <td scope="row" >1</td>
+                                    <td >0302-2022</td>
+                                    <td >Emolientes SAC</td>
+                                    <td >XD</td>
+                                    <td >LIMA</td>
+                                    <td >HOY</td>
+                                     <td >AYER</td>
+                                      <td >COMERCIAL</td>
+                                       <td >RESOLUCION 002</td>
+                                        <td >DESCARGAR?</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+  <br><br><br><br><br><br>
+        <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+            <p class="copyright-text">
+              &copy; Copyright <strong>GDOS</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+            -->
+              Diseñado por <a href="#">Aaron Aquino</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#vista">Inicio</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#pasos">Pasos</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#requisitos">Requisitos</a>
+              </li>
+
+             
+
+              <li class="list-inline-item">
+                <a href="#">Municipalidad de Chaclacayo</a>
+              </li>
+
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+
+
+
+
+
+        </main>
+    </body>
+</html>

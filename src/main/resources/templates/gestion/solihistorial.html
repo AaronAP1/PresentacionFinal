@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="container-fluid" layout:fragment="page-content">
+         <section id="vista" class="hero " >
+    <div class="container text-center " >
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h1>
+          Historial de Registros
+        </h1>
+
+        <p class="tagline">
+         Visualize sus solicitudes enviadas
+        </p>
+       
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  
+  
+  <div>            
+      <br>
+            <div class="container mt-3">                
+                
+                <a th:href="@{/libro/exportarPDF}" class="btn btn-secondary mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a PDF</strong>
+                </a>
+                <a th:href="@{/libro/exportarExcel}" class="btn btn-success mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a Excel</strong>
+                </a>
+                <div class="row">
+                    <div class="col">
+                        <table class="table table-bordered" id="tablita">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">TIPO</th>
+                                    <th scope="col">ORGANIZACION</th>
+                                    <th scope="col">FECHA SOLICITUD</th>
+                                    <th scope="col">FECHA MAXIMA ATENCION</th>
+                                    <th scope="col">ESTADO</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <tr >
+                                    <td scope="row" >1</td>
+                                    <td >Registro</td>
+                                    <td >Emolientes SAC</td>
+                                    <td >39/39/29</td>
+                                    <td >10 dias</td>
+                                    <td >Aceptado</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+  <br><br><br><br><br><br>
+        <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+            <p class="copyright-text">
+              &copy; Copyright <strong>GDOS</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+            -->
+              Diseñado por <a href="#">Aaron Aquino</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#vista">Inicio</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#pasos">Pasos</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#requisitos">Requisitos</a>
+              </li>
+
+             
+
+              <li class="list-inline-item">
+                <a href="#">Municipalidad de Chaclacayo</a>
+              </li>
+
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+    </body>
+</html>

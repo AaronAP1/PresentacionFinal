@@ -11,4 +11,12 @@ public class HomeController {
      public String index(){
     return "login";
     }
+     @GetMapping("/registro")
+     public String registro(){
+         return"registro";
+     }
+     @GetMapping("/principal")
+     public String principal(){
+         return"principal";
+     }
 }

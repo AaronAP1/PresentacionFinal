@@ -5,65 +5,66 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <li class="nav-item active">
 -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head th:fragment="head">
-        <title>Registro | Chaclacayo</title>
+        <title>GDOS | Chaclacayo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/stylosdos.css}" rel="stylesheet">
+         <link th:href="@{/css/stylos.css}" rel="stylesheet">
+         
     </head>
     <body>
-        <div class="conteiner">
-            
-            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: green">
-        <a class="navbar-brand">
+        <header id="header" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center">
+
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+          <a class="navbar-brand">
         <img src="https://www.adobe.com/es/express/create/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg?width=400&format=jpeg&optimize=medium" width="40" height="40" class="d-inline-block align-top" alt="">
     
         </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <ul>
+          <li><a class="nav-link scrollto active" th:href="@{/principal}">Inicio</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/principal#pasos}">Pasos</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/principal#requisitos}">Requisitos</a></li>
+          <li class="dropdown"><a href="#"><span>Solicitudes</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a th:href="@{/visual/login/proceso}">Solicitud en Proceso</a></li>
+              <li><a th:href="@{/visual/login/historial}">Historial </a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Resoluciones</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a th:href="@{/visual/login/sregistro}">Registradas</a></li>
+              
+              
+            </ul>
+          </li>
+          <li><a th:href="@{/visual/login}">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="#">PASOS </a>
-      </li>
       
-        <a class="nav-link" >REQUISITOS </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
-      </li>
-      
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      
-      <button class="btn btn-outline-success my-lg-0 my-sm-3" type="submit">MI MUNICIPALIDAD</button>
-    </form>
+    </div>
+  </header>
+        <div class="container-fluid" layout:fragment="page-content">
 
-
-
-
-  </div>
-        </nav>
-            <div class="container-fluid" layout:fragment="page-content">
-
-           </div>
-            
-            
-            
-            
-            
-            
-            
-        </div>
+                </div>
         
         
         
         
         <!-- Scripts -->
         <script th:src="@{/js/bootstrap.min.js}"></script>
+         <th:block layout:fragment="page-scripts">
+
+    </th:block>
     </body>
 </html>

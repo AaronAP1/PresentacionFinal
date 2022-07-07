@@ -2,13 +2,408 @@
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout/layout}">
+      layout:decorate="~{layout/layout}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head th:replace="layout/layout :: head">
         <title>Registro Principal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/stylosdos.css}" rel="stylesheet">
+         <link th:href="@{/css/stylos.css}" rel="stylesheet">
+           
     </head>
-    <body>
-        <div>Pincipal</div>
+    <body class="container-fluid" layout:fragment="page-content">
+        <!-- ======= Header ======= -->
+  
+        <section id="vista" class="hero " >
+    <div class="container text-center " >
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h1>
+          Plataforma Virtual
+        </h1>
+
+        <p class="tagline">
+          Gestione todos sus procesos de Organizaciones Sociales
+        </p>
+        <a class="btn btn-full scrollto" href="#about">Inicia ya!</a>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section class="about " id="pasos">
+
+      <div class="container text-center ">
+        <h2>
+          PASOS PARA REGISTRAR/ACTUALIZAR A TU ORGANIZACIÓN
+        </h2>
+
+        <p>
+         Los siguientes pasos para poder registar o actualizar tu organizacion
+        </p>
+
+        <div class="row stats-row">
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Iniciar Sesion
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Subir Documentos
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Enviar Solicitud
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Esperar Aprobacion
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+   
+      <div class="container" id="requisitos">
+        <h2 class="text-center">
+          REQUISITOS
+        </h2>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Solicitud dirigida a la gerencia de Participacion Vecinal
+                </h3>
+
+                <p>
+                  Solicitud dirigida a la Gerencia de Participación Vecinal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-card-checklist"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Acta de fundación o de Constitución
+                </h3>
+
+                <p>
+                 Acta de fundación o de Constitución.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Estatuto y Acta de aprobación
+                </h3>
+
+                <p>
+                  Estatuto y Acta de aprobación
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-binoculars"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Acta de elección del Órgano Directivo
+                </h3>
+
+                <p>
+                  Acta de elección del Órgano Directivo
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-brightness-high"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Nómina de los miembros del órgano directivo
+                </h3>
+
+                <p>
+                  Nómina de los miembros del órgano directivo
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Nómina de los miembros de la Organización Social
+                </h3>
+                <p>
+                  Nómina de los miembros de la Organización Social
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Plano o croquis referencial de la ubicación del local
+                </h3>
+                <p>
+                  Plano o croquis referencial de la ubicación del local o domicilio institucional de la organizacion.
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Plano o croquis del radio de acción de la organización
+                </h3>
+                <p>
+                  Plano o croquis del radio de acción de la organización
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Otro acervo documental
+                </h3>
+                <p>
+                  Otro acervo documenral, gráfico y fuentes de registro pueden ser representados adicionalmente para evidenciar la existencia del hecho, el historial y antecedentes de la organización.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Features Section -->
+
+    <!-- ======= Call to Action Section ======= -->
+    <section class="cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-sm-12 text-lg-start text-center">
+            <h2>
+              ¿Listo Para Registar tu Organizacion Social?
+            </h2>
+
+            <p>
+              Todo de manera virtual por la nueva plataforma virtual, solicita tu reconociento de tu Organizacion Social!
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+            <a class="btn btn-ghost" href="#">Inicia Ya!</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Call to Action Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section class="portfolio" id="portfolio">
+
+      <div class="container text-center">
+        <h2>
+          MODELOS
+        </h2>
+
+        <p>
+          Modelos de documentos ah adjuntar en sus solicitudes.
+        </p>
+      </div>
+        <br>
+        <div class="container">
+            
+            <table class="table">
+                
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Nombre de Modelo</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Modelo para Llenar</th>
+                        
+                       
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr >
+                        <th scope="row" >1</th>
+                        <td >documento prueba</td>
+                        <td >.pdf</td>
+                        <td >.docs</td>
+                        
+                    </tr>
+                    
+                    
+                </tbody>
+                
+                
+                
+            </table>
+            
+            
+            
+            
+            
+        </div>
+        
+
+      
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <br>
+    <br>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+            <p class="copyright-text">
+              &copy; Copyright <strong>GDOS</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+            -->
+              Diseñado por <a href="#">Aaron Aquino</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#vista">Inicio</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#pasos">Pasos</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#requisitos">Requisitos</a>
+              </li>
+
+             
+
+              <li class="list-inline-item">
+                <a href="#">Municipalidad de Chaclacayo</a>
+              </li>
+
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     </body>
 </html>

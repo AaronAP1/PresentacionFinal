@@ -4,41 +4,39 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       >
     <head >
-        <title></title>
+        <title>LOGIN | GDOS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/stilospropios.css}" rel="stylesheet">
     </head>
-    <body class="m-0 vh-100 row justify-content-center align-items-center" _c_t_common="1" >
-
-
-
-        <div class="container" >
-            <div class="d-flex justify-content-center w-100 h-100" >
-
-
-
-                <form class="form-group align-content-center ">
-                    <img class="mb-4" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png" alt="" width="82" height="82">
-                    <img class="mb-4" src="https://media.discordapp.net/attachments/984970824282955818/993359799372750858/unknown.png?width=752&height=564" alt="" width="120" height="80">
-                    <h1 class="h3 mb-3 font-weight-normal">Ingreso</h1>
-                    <label>D.N.I *</label>
-                    <input type="text" id="inputEmail" class="form-control mb-4 " placeholder="Ingrese su numero del DNI"  required="" autofocus="">
-                    <label>Contraseña *</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese su contraseña" required="">
-
-                    <button class="btn btn-lg btn-success btn-block" type="submit">Iniciar Sesion</button>
-                    <p class="mt-5 mb-3 text-muted">¿No Tienes Cuenta?</p>
-                </form>
-
-                <div class="card-footer">
-
+    <body>
+        <div  class="text-center form-signin"   >
+            <form class="form-signin" th:action="@{/principal}">
+                <img class="mb-4" src="https://media.discordapp.net/attachments/984970824282955818/994423074449539172/unknown.png" alt="" width="122" height="82">
+                <h1 class="h3 mb-3 font-weight-normal">INGRESO</h1>
+                <div class="mb-0" style="text-align: left; ">
+                    <label>
+                        D.N.I*
+                    </label>
                 </div>
 
-            </div>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Ingrese su numero de DNI" required autofocus>
+                <div class="mb-0" style="text-align: left; ">
+                    <label>
+                        Contraseña*
+                    </label>
+                </div>
+
+                <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese su contraseña" required>
+                <div class="mb-3" style="text-align: left; ">
+                    <br>
+                    <a th:href="@{/}" style=" color: green;" >¿No tienes cuenta?</a>
+                </div>
+                <button class="btn btn-lg btn-success btn-block" type="submit">Iniciar Sesion</button>
+
+            </form>
         </div>
-
-
 
 
 
