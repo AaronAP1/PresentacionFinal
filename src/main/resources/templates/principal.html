@@ -5,12 +5,7 @@
       layout:decorate="~{layout/layout}"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head th:replace="layout/layout :: head">
-        <title>Registro Principal</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-        <link th:href="@{/css/stylosdos.css}" rel="stylesheet">
-         <link th:href="@{/css/stylos.css}" rel="stylesheet">
+        
            
     </head>
     <body class="container-fluid" layout:fragment="page-content">
@@ -20,7 +15,7 @@
     <div class="container text-center " >
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
+          <a class="hero-brand" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
         </div>
       </div>
 
@@ -32,7 +27,7 @@
         <p class="tagline">
           Gestione todos sus procesos de Organizaciones Sociales
         </p>
-        <a class="btn btn-full scrollto" href="#about">Inicia ya!</a>
+        <a class="btn btn-full scrollto bg-success" th:href="@{/visual/login/proceso}">Inicia ya!</a>
       </div>
     </div>
 
@@ -274,7 +269,7 @@
     </section><!-- End Features Section -->
 
     <!-- ======= Call to Action Section ======= -->
-    <section class="cta">
+    <section class="cta bg-success">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 col-sm-12 text-lg-start text-center">
@@ -288,7 +283,7 @@
           </div>
 
           <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-            <a class="btn btn-ghost" href="#">Inicia Ya!</a>
+            <a class="btn btn-ghost" th:href="@{/visual/login/proceso}">Inicia Ya!</a>
           </div>
         </div>
       </div>
@@ -325,10 +320,138 @@
                 <tbody>
                     <tr >
                         <th scope="row" >1</th>
-                        <td >documento prueba</td>
-                        <td >.pdf</td>
-                        <td >.docs</td>
+                        <td >Solicitud para registro nuevo de organizacion</td>
+                        <td  > 
+                            <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_SOLICITUD_DE_NUEVA_ORGANIZACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
                         
+                        </td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_SOLICITUD_NUEVO_GPV.docx">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >2</th>
+                        <td >Solicitud para actualizacion de organizacion</td>
+                        <td >  
+                         <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_SOLICITUD_ACTUALIZACION_GPV.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                        </td> 
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_SOLICITUD_ACTUALIZACION_GPV.docx">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                             
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >3</th>
+                        <td >Acta de elección del órgano directivo</td>
+                        <td> 
+                           <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ELECCION_ORGANO_DIRECTIVO.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                        
+                        </td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_DE_ACTA_DE_ELECCION_DE_MIEMBROS_DE_LA_JUNTA_DIRECTIVA.docx">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                             
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >4</th>
+                        <td >Estatuto y acta de aprobación</td>
+                        <td >
+                            <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ESTATUTO_ACTA_APROBACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                        
+                            
+                        </td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ESTATUTO_ACTA_APROBACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >5</th>
+                        <td >Acta de fundación o de contitución</td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ACTA_CONSTITUCION_ASOCIACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                            
+                            
+                        </td>
+                        <td >
+                            
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ACTA_CONSTITUCION_ASOCIACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >6</th>
+                        <td >Plano de acción de la organización</td>
+                        <td >
+                              <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ACTA_CONSTITUCION_ASOCIACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                            
+                            
+                        </td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_ACTA_CONSTITUCION_ASOCIACION.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >7</th>
+                        <td >Nómina de los miembros de la organización social</td>
+                        <td >
+                            
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_NOMINA_ASOCIADOS_TOTALIDAD.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                            
+                        </td>
+                        <td >
+                            <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_NOMINA_ASOCIADOS_TOTALIDAD.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <th scope="row" >8</th>
+                        <td >Nómina de los miembros de la organización directivo</td>
+                        <td >
+                              <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_NOMINA_JUNTA_DIRECTIVA.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/pdf.png" > </a>
+                            
+                            
+                            
+                        </td>
+                        <td >
+                             <a target="_blank" href="http://ruos.gpvlima.com/modelos/MODELO_NOMINA_JUNTA_DIRECTIVA.pdf">
+                                <img style="width: 30px" src="http://ruos.gpvlima.com/images/word.png" > </a>
+                            
+                            
+                            
+                        </td>
                     </tr>
                     
                     
@@ -336,15 +459,17 @@
                 
                 
                 
+                
+                
             </table>
             
             
-            
+           
             
             
         </div>
         
-
+        
       
     </section><!-- End Portfolio Section -->
 
@@ -353,7 +478,7 @@
     <br>
 
   </main><!-- End #main -->
-
+ 
   <!-- ======= Footer ======= -->
   <footer class="site-footer">
     <div class="bottom">

@@ -5,16 +5,14 @@
       layout:decorate="~{layout/layout}"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head th:replace="layout/layout :: head">
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     <body class="container-fluid" layout:fragment="page-content">
         <section id="vista" class="hero " >
             <div class="container text-center " >
                 <div class="row">
                     <div class="col-md-12">
-                        <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
+                        <a class="hero-brand"  title="Home"><img alt="Bell Logo" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png"></a>
                     </div>
                 </div>
 
@@ -103,29 +101,25 @@
                                     <th scope="col">N°</th>
                                     <th scope="col">CODIGO DE ORGANIZACION</th>
                                     <th scope="col">NOMBRE DE ORGANIZACION</th>
-                                    <th scope="col">NIVEL</th>
-                                    <th scope="col">DISTRITO</th>
+                                    <th scope="col">TIPO</th>
+                                    
                                     <th scope="col">INICIO DE VIGENCIA</th>
                                     <th scope="col">FIN DE VIGENCIA</th>
-                                    <th scope="col">TIPO DE ORGANIZACION</th>
+                                    
                                     <th scope="col">RESOLUCION DE LA ORGANIZACION</th>
-                                    <th scope="col">DESCARGAR RESOLUCION</th>
+                                    
                                     
                                 </tr>
                             </thead>
                             <tbody> 
-                                <tr >
-                                    <td scope="row" >1</td>
-                                    <td >0302-2022</td>
-                                    <td >Emolientes SAC</td>
-                                    <td >XD</td>
-                                    <td >LIMA</td>
-                                    <td >HOY</td>
-                                     <td >AYER</td>
-                                      <td >COMERCIAL</td>
-                                       <td >RESOLUCION 002</td>
-                                        <td >DESCARGAR?</td>
-                                    
+                                <tr th:each="os:${bus}">
+              <td scope="row" th:text="${os.id}" ></td>
+              <td th:text="${os.codigo}"></td>
+              <td th:text="${os.nombre}"></td>
+              <td th:text="${os.tipo}"></td>
+              <td th:text="${os.inicio_vigencia}"></td>
+              <td th:text="${os.fin_vigencia}"></td>
+              <td th:text="${os.resolucion}"></td>
                                 </tr>
                             </tbody>
                         </table>

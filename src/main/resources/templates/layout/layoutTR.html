@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>Gestion | GDOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+         <link th:href="@{/css/stylosTR.css}" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark sticky-top bg-success flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" th:href="@{/principal}"  target="_blank">GDOS | Chaclacayo</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Cerrar Secion</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" th:href="@{/dash/gdos}">
+              <span data-feather="home"></span>
+              Principal <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/listas}">
+              <span data-feather="file"></span>
+              Informes Tecnicos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/resoluciones}">
+              <span data-feather="file"></span>
+              Resoluciones Sociales
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/organizacion}">
+              <span data-feather="users"></span>
+              Publicaciones 
+            </a>
+          </li>
+          
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Usuarios</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Registro
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Muy Pronto
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+               Muy Pronto
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Muy Pronto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+       <div class="container-fluid" layout:fragment="page-content">
+
+                </div>
+        
+        
+        
+        
+        <!-- Scripts -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+         <th:block layout:fragment="page-scripts">
+
+    </th:block>
+    </body>
+</html>

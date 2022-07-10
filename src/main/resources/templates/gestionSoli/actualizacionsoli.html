@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/layout :: head">
+    <body class="container-fluid" layout:fragment="page-content">
+                     
+         <div class="container">
+             <hr>
+             <hr>
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://media.discordapp.net/attachments/984970824282955818/993359585006080040/unknown.png" alt="" width="72" height="72">
+    <h2>Formulario de Actualizacion Organizacion Social</h2>
+    <p class="lead"> Rellene los campos a continuacion para registrar una nueva solicitud </p>
+    <p class="lead"> Recuerde tener los documentos listos para subir, si no sabe donde ingrese la opcion Requisitos</p>
+  </div>
+            <div class="container mt-3">
+               
+                <hr>
+               <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Nombres</label>
+            <input type="text" class="form-control" placeholder="Nombre Organizacion Social" value="" required>
+            <div class="invalid-feedback">
+              Ingrese un nombre valido
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Ubicacion</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Distrito, Localidad" value="" required>
+            <div class="invalid-feedback">
+              La ubicacion es requerida
+            </div>
+          </div>
+        </div>
+
+          <div class="mb-3">
+          <label for="email">Junta Directiva</label>
+          <input type="email" class="form-control" id="email" placeholder="ChaclaUnidos">
+          <div class="invalid-feedback">
+            Ingrese un nombre valido.
+          </div>
+        </div>
+        
+
+        <div class="mb-3">
+          <label for="email">Email </label>
+          <input type="email" class="form-control" id="email" placeholder="you@correo.com">
+          <div class="invalid-feedback">
+            Ingrese un correo valido.
+          </div>
+        </div>
+
+        
+
+        
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Tipo</label>
+            <select class="custom-select d-block w-100" required>
+              <option value="">Seleccione</option>
+              <option>Comunitario</option>
+              <option>Deportivo</option>
+              <option>Economico</option>
+            </select>
+            <div class="invalid-feedback">
+             Seleccione un tipo de Organizacion Social
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">Estado</label>
+            <select class="custom-select d-block w-100" id="state" required>
+              <option value="">Seleecione</option>
+              <option>Activo</option>
+              <option>Desactivado</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          
+        </div>
+        <hr class="mb-4">
+        
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Documentos</h4>
+
+        
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Solicitud</label>
+            <input type="file" class="form-control" id="cc-name" placeholder="" required >
+            <small class="text-muted">Suba su documento</small>
+            <div class="invalid-feedback">
+              Documento requerido
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Acta de elección organo directivo</label>
+            <input type="file" class="form-control" id="cc-number" placeholder="" required>
+            <div class="invalid-feedback">
+              Documento requerido
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-expiration">Estatuto y acta de aprobacion</label>
+            <input type="file" class="form-control" id="cc-expiration" placeholder="" required>
+            <div class="invalid-feedback">
+               Documento requerido
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-cvv">Acta de fundacion o contitucion</label>
+            <input type="file" class="form-control" id="cc-cvv" placeholder="" required>
+            <div class="invalid-feedback">
+               Documento requerido
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-expiration">Plano de accion de la organizacion</label>
+            <input type="file" class="form-control" id="cc-expiration" placeholder="" required>
+            <div class="invalid-feedback">
+               Documento requerido
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-cvv">Nomina de los miembros de la organizacion social</label>
+            <input type="file" class="form-control" id="cc-cvv" placeholder="" required>
+            <div class="invalid-feedback">
+               Documento requerido
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-expiration">Nomina de los miembros organizacion directivo</label>
+            <input type="file" class="form-control" id="cc-expiration" placeholder="" required>
+            <div class="invalid-feedback">
+               Documento requerido
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar Solicitud</button>
+      </form>
+            
+            </div>
+             
+             <br><br><br><br><br><br>
+       
+        </div>
+             
+              <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+            <p class="copyright-text">
+              &copy; Copyright <strong>GDOS</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+            -->
+              Diseñado por <a href="#">Aaron Aquino</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#vista">Inicio</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#pasos">Pasos</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#requisitos">Requisitos</a>
+              </li>
+
+             
+
+              <li class="list-inline-item">
+                <a href="#">Municipalidad de Chaclacayo</a>
+              </li>
+
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+    </body>
+</html>

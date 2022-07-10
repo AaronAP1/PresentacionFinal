@@ -18,30 +18,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
          
     </head>
     <body>
-        <header id="header" class="d-flex align-items-center fixed-top">
+        <header id="header" class="d-flex align-items-center fixed-top bg-success">
     <div class="container d-flex align-items-center">
 
       
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" class="navbar order-last order-lg-0 ">
           <a class="navbar-brand">
         <img src="https://www.adobe.com/es/express/create/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg?width=400&format=jpeg&optimize=medium" width="40" height="40" class="d-inline-block align-top" alt="">
     
         </a>
         <ul>
-          <li><a class="nav-link scrollto active" th:href="@{/principal}">Inicio</a></li>
+          <li><a class="nav-link scrollto active" th:href="@{/principal}" >Inicio</a></li>
           <li><a class="nav-link scrollto" th:href="@{/principal#pasos}">Pasos</a></li>
           <li><a class="nav-link scrollto" th:href="@{/principal#requisitos}">Requisitos</a></li>
           <li class="dropdown"><a href="#"><span>Solicitudes</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a th:href="@{/visual/login/proceso}">Solicitud en Proceso</a></li>
-              <li><a th:href="@{/visual/login/historial}">Historial </a></li>
+              <li><a th:href="@{/historial}">Historial </a></li>
               
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Resoluciones</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a th:href="@{/visual/login/sregistro}">Registradas</a></li>
+              <li><a th:href="@{/busqueda}">Registradas</a></li>
               
               
             </ul>
